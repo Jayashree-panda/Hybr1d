@@ -10,6 +10,7 @@ export default function HackerNews() {
   const [hackerNewsData, setHackerNewsData] = useState([]);
 
   const getHackerNewsData = () => {
+    setIsLoading(true);
     axios
     .get(`https://hn.algolia.com/api/v1/search?query=${searchValue}`)
     .then((res) => {
