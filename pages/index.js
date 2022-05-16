@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Input, Button, Loader } from 'semantic-ui-react';
 import axios from 'axios';
-import 'semantic-ui-css/semantic.min.css';
 import DisplayHackerNews from '../pageComponents/displayHackerNews';
 import styles from '../styles/hacker_news.module.scss';
 
