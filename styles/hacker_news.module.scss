@@ -71,8 +71,12 @@ $primary_color: #C40606;
            text-align: right; 
         }
         .comment_text {
-            color: green;
+            color: $primary_color;
             font-weight: bold;
+        }
+        &:hover {
+            transform: scale(1.025)!important;
+            transition: .3s!important;
         }
     }
 }
