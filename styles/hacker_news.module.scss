@@ -31,6 +31,7 @@ $primary_color: #C40606;
         }
         .news_details {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-evenly;
 
             :global(i.icon.star:before) {
@@ -51,4 +52,42 @@ $primary_color: #C40606;
             color: unset;
         }
     } 
+}
+
+.news_details_container {
+    h1, h2 {
+        color: white;
+    }
+
+    .reward_points {
+        color: white;
+    }
+
+    :global(.ui.segment) {
+        width: 50vw;
+        .created_at {
+           font-size: smaller;
+           opacity: 0.6;
+           text-align: right; 
+        }
+        .comment_text {
+            color: green;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hacker_news_container {
+        padding: 20px;
+
+        .hacker_news_wrapper {
+            width: 70%;
+        }
+    }
+    .news_details_container {
+        :global(.ui.segment) {
+            width: 80vw;
+        }
+    }
 }
