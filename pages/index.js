@@ -6,11 +6,10 @@ import styles from '../styles/hacker_news.module.scss';
 
 export default function HackerNews() {
   const [searchValue, setSearchValue] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [hackerNewsData, setHackerNewsData] = useState([]);
 
   const getHackerNewsData = () => {
-    setIsLoading(true);
     axios
     .get(`https://hn.algolia.com/api/v1/search?query=${searchValue}`)
     .then((res) => {
